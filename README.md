@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WebForum - Modern Discussion Platform
+
+A beautiful and modern web forum application built with Next.js 14, TypeScript, and shadcn/ui components.
+
+## Features
+
+✨ **Modern UI/UX**
+- Clean and responsive design
+- Beautiful shadcn/ui components
+- Dark mode support
+- Smooth animations and transitions
+
+🎨 **Forum Features**
+- Category-based organization
+- Thread creation and browsing
+- Post replies with rich formatting
+- User profiles with avatars
+- Thread pinning and locking
+- View counts and engagement metrics
+- Real-time activity timestamps
+
+🛠️ **Tech Stack**
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Components**: shadcn/ui
+- **Icons**: Lucide React
+- **Fonts**: Geist Sans & Geist Mono
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, or pnpm
 
+### Installation
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── thread/[id]/    # Thread detail pages
+│   ├── new-thread/     # Create new thread
+│   ├── layout.tsx      # Root layout
+│   └── page.tsx        # Home page
+├── components/
+│   ├── ui/             # shadcn/ui components
+│   ├── category-card.tsx
+│   ├── thread-card.tsx
+│   ├── post.tsx
+│   └── forum-header.tsx
+├── lib/
+│   ├── mock-data.ts    # Sample forum data
+│   └── utils.ts        # Utility functions
+└── types/
+    └── forum.ts        # TypeScript interfaces
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Features Overview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Home Page
+- Browse all threads organized by categories
+- View pinned threads separately
+- Quick search functionality
+- Create new thread button
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Thread Detail Page
+- View original post and all replies
+- User information and post counts
+- Like and reply functionality
+- Thread metadata (views, replies, activity)
 
-## Deploy on Vercel
+### Create Thread
+- Choose from multiple categories
+- Rich text content area
+- Form validation
+- Responsive design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Adding New Categories
+Edit `src/lib/mock-data.ts` to add new categories:
+
+```typescript
+{
+  id: "7",
+  name: "Your Category",
+  description: "Category description",
+  threadCount: 0,
+  icon: "🎯",
+}
+```
+
+### Styling
+- Global styles: `src/app/globals.css`
+- Theme colors: CSS variables in globals.css
+- Component styles: Tailwind classes
+
+## Future Enhancements
+
+- [ ] User authentication and authorization
+- [ ] Database integration (PostgreSQL/MongoDB)
+- [ ] Real-time updates with WebSockets
+- [ ] Advanced search and filtering
+- [ ] User reputation system
+- [ ] Markdown support for posts
+- [ ] File attachments
+- [ ] Email notifications
+- [ ] Moderation tools
+- [ ] API endpoints
+
+## Scripts
+
+```bash
+# Development
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+
+# Lint code
+npm run lint
+```
+
+## License
+
+MIT
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
