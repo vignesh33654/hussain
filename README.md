@@ -89,6 +89,39 @@ src/
 - Form validation
 - Responsive design
 
+### Custom Card Components (`/cards-demo`)
+A comprehensive library of reusable card components:
+
+#### 📊 **StatsCard**
+- Display metrics with icons
+- Trend indicators (positive/negative)
+- Perfect for dashboards and analytics
+
+#### 👤 **ProfileCard**
+- User profiles with avatars
+- Social stats (posts, followers, following)
+- Follow/unfollow functionality
+- Badge system
+
+#### 💬 **SocialPostCard**
+- Social media style posts
+- Like, comment, share, and bookmark actions
+- Image support
+- Engagement metrics
+
+#### 📅 **EventCard**
+- Event information with date/time
+- Location and registration status
+- Attendee count with progress bar
+- Featured images
+
+#### 🛒 **ProductCard**
+- E-commerce product display
+- Price with discount badges
+- Star ratings and reviews
+- Add to cart functionality
+- Stock status indicator
+
 ## Customization
 
 ### Adding New Categories
